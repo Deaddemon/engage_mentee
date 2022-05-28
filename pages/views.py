@@ -17,8 +17,8 @@ class AnalysisPageView(TemplateView):
 
     template_name = 'analysis.html'
 
-class PredictionPageView(TemplateView):
-    template_name = 'prediction.html'
+class ReportPageView(TemplateView):
+    template_name = 'report.html'
 
 class HomePageView(TemplateView):
     template_name = 'home.html'
