@@ -1,10 +1,19 @@
 <!-- templates/home.html -->
+ 
 <style> 
  
 .header {
     border-bottom:1px solid #eaeaea;
     margin-top: 30%;
+     
+ 
 }
+ #id{
+     
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+ }
  
  h1{
     text-align: center;
@@ -18,28 +27,34 @@ p{
     text-align: center;
     font-family:  "Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
+
  
  
 </style>
 
+ 
+ 
 {% extends 'index.html' %}
  
 
-
 {% block content %}
 
+
+<body  id="bg" style="background-image: url('static/images/home_background.png'); "> 
  
 <div class="header">
      <h1>Engage</h1>
      <h6>Find your way to the journey of Data Science </h6>
+      
 </div>
 <div class="footer">
      
     <p>A platform for Analysis Enthusiasts</p>
      
-    <!-- <img src="https://github.com/Deaddemon/Random_Projects/blob/main/images/home_background.png"/>  
-     <img src="images/home_background.png"> -->
+     
 </div> 
+ 
+</body>
 
  
  
