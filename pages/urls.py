@@ -17,10 +17,13 @@
 
 
 from django.urls import path
-from .views import AnalysisPageView, PredictionPageView
+from .views import AnalysisPageView, HomePageView, PredictionPageView  
 
 
 urlpatterns = [
-    path('prediction/', PredictionPageView.as_view(), name='prediction'), # new
-    path('', AnalysisPageView.as_view(), name='analysis'),
+    
+    
+    path('prediction/', PredictionPageView.as_view(), name='prediction'), 
+    path('analysis/', AnalysisPageView.as_view(), name='analysis'),
+    path('', HomePageView.as_view() , name='home')
 ]

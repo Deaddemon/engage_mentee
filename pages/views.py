@@ -19,3 +19,8 @@ class AnalysisPageView(TemplateView):
 
 class PredictionPageView(TemplateView):
     template_name = 'prediction.html'
+
+class HomePageView(TemplateView):
+    template_name = 'home.html'
+
+ 

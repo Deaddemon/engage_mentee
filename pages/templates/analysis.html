@@ -1,25 +1,270 @@
 <!-- templates/home.html -->
 
-
-{% extends 'base.html' %}
+  <style>
+    .container{
+      margin-right: 0;
+      padding-left: 0;
+    }
+  </style>
+{% extends 'index.html' %}
  
 
 
 {% block content %}
 
-<div>
-  <div>
-    <h1>GeneralFindings</h1>
-  </div>
-  <div>
-    {%include 'generalFindings/graph1.html' %}
-    <br><br>
-    <br><br><br><br><br><br>
-    {% include 'generalFindings/graph2.html' %}
+ 
+ <!-- container first -->
+<div class="jumbotron text-center">
+  <h1>General Findings</h1>
+  <p>General Insights that gives overview of what is there in dataset</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          Featured
+        </div>
+        <div class="card-body">
+          {% include "jupyterNotebook/files/city_mpg_histogram.html" %}
+        </div>
+      </div>
+       
+       
+    </div>
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          Featured
+        </div>
+        <div class="card-body">
+          {% include "jupyterNotebook/files/curb_weight_histogram.html" %}
+        </div>
+      </div>
+       
+
+    </div>
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          Featured
+        </div>
+        <div class="card-body">
+          {% include "jupyterNotebook/files/highway_mpg_histogram.html" %}
+        </div>
+      </div>
+       
+       
+      
+    </div>
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          Featured
+        </div>
+        <div class="card-body">
+          {% include "jupyterNotebook/files/horsepower_histogram.html" %}
+        </div>
+      </div>
+       
+     
+    
+    </div>
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          Featured
+        </div>
+        <div class="card-body">
+          {% include "jupyterNotebook/files/peak_rpm_histogram.html" %}
+        </div>
+      </div>
+       
+   
+  
+   </div>
+   <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        Featured
+      </div>
+      <div class="card-body">
+        {% include "jupyterNotebook/files/price_histogram.html" %}
+      </div>
+    </div>
+       
+   
+  
+   </div>
+   <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        Featured
+      </div>
+      <div class="card-body">
+        {% include "jupyterNotebook/files/wheel_base_histogram.html" %}
+      </div>
+    </div>
+       
+
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          Featured
+        </div>
+        <div class="card-body">
+          {% include "jupyterNotebook/files/body_style_treemap.html" %}
+        </div>
+      </div>
+
+    
+         
+     
+    
+    </div>
   </div>
 </div>
  
+
+<!-- container second -->
+<div class="jumbotron text-center">
+  <h1>Cars Performance</h1>
+  <p>Relation between various factors that effect Cars Performance</p> 
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          Featured
+        </div>
+        <div class="card-body">
+          {% include "jupyterNotebook/files/city_mpg_by_num_of_cylinders_density_plot.html" %}
+        </div>
+      </div>
+       
+       
+    </div>
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          Featured
+        </div>
+        <div class="card-body">
+          {% include "jupyterNotebook/files/wheel_base_by_curb_weight_lmplot.html" %}
+        </div>
+      </div>
+       
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            Featured
+          </div>
+          <div class="card-body">
+            {% include "jupyterNotebook/files/horsepower_by_curb_weight_lmplot.html" %}
+          </div>
+        </div>
+
+        <div class="col-sm-12">
+          <div class="card">
+            <div class="card-header">
+              Featured
+            </div>
+            <div class="card-body">
+              {% include "jupyterNotebook/files/horsepower_by_engine_size_lmplot.html" %}
+            </div>
+          </div>
+ 
+         
+     
+    
+    </div>
+  </div>
+</div>
+</div>
+ 
+
+
+<!-- container third -->
+<div class="jumbotron text-center">
+  <h1>Price Analysis</h1>
+  <p>Knowing what factors effects the price</p> 
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          Featured
+        </div>
+        <div class="card-body">
+          {% include "jupyterNotebook/files/drive_wheels_by_city_mpg_lollipop.html" %}
+        </div>
+      </div>
+       
+       
+    </div>
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          Featured
+        </div>
+        <div class="card-body">
+          {% include "jupyterNotebook/files/price_by_curb_weight_lmplot.html" %}
+        </div>
+      </div>
+       
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            Featured
+          </div>
+          <div class="card-body">
+            {% include "jupyterNotebook/files/body_style_by_price_boxplot.html" %}
+          </div>
+        </div>
+
+        <div class="col-sm-12">
+          <div class="card">
+            <div class="card-header">
+              Featured
+            </div>
+            <div class="card-body">
+              {% include "jupyterNotebook/files/drive_wheels_by_price_boxplot.html" %}
+            </div>
+          </div>
+ 
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-header">
+                Featured
+              </div>
+              <div class="card-body">
+                {% include "jupyterNotebook/files/body_style_by_price_point.html" %}
+              </div>
+            </div>
+
+            <div class="col-sm-12">
+              <div class="card">
+                <div class="card-header">
+                  Featured
+                </div>
+                <div class="card-body">
+                  {% include "jupyterNotebook/files/drive_wheels_by_curb_weight_boxplot.html" %}
+                </div>
+              </div>
+     
+    
+    </div>
+  </div>
+</div>
+</div>
  
  
+
  
+
 {% endblock content %}
