@@ -25,7 +25,7 @@ SECRET_KEY = 'f(o(x(ze^4^wf(=ag&e_7tedc+s&va_k%$-hen0&m*g^-jqc=f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
