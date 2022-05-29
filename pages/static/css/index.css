@@ -1,0 +1,107 @@
+
+   
+html {
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  background: #ffffff;
+  color:black
+}
+
+.dark-mode {
+  background-color: black;
+   
+} 
+@import url('//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
+
+body{
+  background-color: #ececec;
+/* 
+  
+  IF You Need Transition
+    
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+  
+*/
+  
+  
+}
+.night{
+  background-color: #151515;
+}
+.dntoggle{
+  font-size: 28px;
+  border-radius: 100px;
+  background-color: #111111;
+  padding: 15px;
+  color:#fcfcfc;
+  box-shadow: 1px 2px 6px rgba(0,0,0,.3);
+  cursor: pointer;
+  
+  position: fixed;
+  bottom:20px;
+  left: 20px;
+
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.fa-moon-o:before{
+  padding:0 2px;
+}
+.fa-sun-o{
+  background-color: #212121;
+  color:#ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Optional  */
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 24px 0 #ddd;
+  box-sizing: border-box;
+  padding: 20px;
+  font-family: arial;
+  
+}
+
+.content h1{
+  font-size: 58px;
+  font-weight: 100;
+  margin: 0 0 20px;
+  
+}
+
+.content .text{
+  line-height: 23px;
+  font-size: 15px;
+  color: #444;
+}
+
+.night *{
+  color: #999 !important;
+  box-shadow: none;
+}
+
+.night .content{
+  border: 1px solid #999;
+}
+ 

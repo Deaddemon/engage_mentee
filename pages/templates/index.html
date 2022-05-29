@@ -29,9 +29,75 @@ html {
   color:black
 }
 
+ 
+@import url('//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
 
+body{
+  background-color: #ffffff;
+}
+.night{
+  background-color: #151515;
+}
+.dntoggle{
+  font-size: 28px;
+  border-radius: 100%;
+  background-color: #111111;
+  padding: 15px;
+  color:#ffffff;
+  box-shadow: 1px 2px 6px rgba(0,0,0,.3);
+  cursor: pointer;
+  
+  position: fixed;
+  bottom:20px;
+  left: 20px;
 
+  
+}
+.fa-moon-o:before{
+  padding:0 2px;
+}
+.fa-sun-o{
+  background-color: #111111;
+  color:#ffffff;
+}
+ 
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 24px 0 #ddd;
+  box-sizing: border-box;
+  padding: 20px;
+  font-family: arial;
+  
+}
+
+.content h1{
+  font-size: 58px;
+  font-weight: 100;
+  margin: 0 0 20px;
+  
+}
+
+.content .text{
+  line-height: 23px;
+  font-size: 15px;
+  color: #444;
+}
+
+.night *{
+  color: #999 !important;
+  box-shadow: none;
+}
+
+.night .content{
+  border: 1px solid #999;
+}
 </style>
+
+
+
  
 <body  >
      
@@ -57,6 +123,11 @@ html {
                         <li class="nav-item">
                           <a class="nav-link pl-0"href="{% url 'report' %}"><i class="fa fa-cog fa-fw"></i> <span class="d-none d-md-inline">Report</span></a>
                         </li>
+                        <li class="nav-item">
+                           
+                            <div class="dntoggle fa fa-moon-o"><i class="fa-solid fa-moon"></i></div>
+                        </li>
+                        
                         
                     </ul>
                 </div>
@@ -83,6 +154,34 @@ html {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+        <script>
+            var theme = window.localStorage.currentTheme;
+        
+        $('body').addClass(theme);
+        
+        if ($("body").hasClass("night")) {
+            $('.dntoggle').addClass('fa-sun-o');
+            $('.dntoggle').removeClass('fa-moon-o');
+        } else {
+            $('.dntoggle').removeClass('fa-sun-o');
+            $('.dntoggle').addClass('fa-moon-o');
+        }
+        
+        $('.dntoggle').click(function() {
+            $('.dntoggle').toggleClass('fa-sun-o');
+            $('.dntoggle').toggleClass('fa-moon-o');
+        
+            if ($("body").hasClass("night")) {
+                $('body').toggleClass('night');
+                localStorage.removeItem('currentTheme');
+                localStorage.currentTheme = "day";
+            } else {
+                $('body').toggleClass('night');
+                localStorage.removeItem('currentTheme');
+                localStorage.currentTheme = "night";
+            }
+        });
+        </script>
 </body>
 </html> 
  
