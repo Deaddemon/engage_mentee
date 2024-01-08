@@ -24,5 +24,9 @@ https://drive.google.com/file/d/1c2lS0ftlVE6TNSdIkgXmrY-xusAJxa-W/view?usp=shari
 	- Matplotlib
     - Mpld3
 	- Seaborn
+
+ ## Preview
  
+![image](https://github.com/Deaddemon/engage_mentee/assets/77224604/e84c18ee-fb85-48c0-a4ae-cddb02a5f590)
+
  
